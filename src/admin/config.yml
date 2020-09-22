@@ -1,9 +1,9 @@
 backend:
-  name: github
-  # repo: nihmble/gridsome-template-posts
+  # name: github
+  # repo: nihmble/gridsome-template
+  name: proxy
 
 # when using the default proxy server port
-# npx netlify-cms-proxy-server
 local_backend: true
 
 media_folder: 'static/uploads'
@@ -18,7 +18,7 @@ collections:
     slug: "index"
     fields:
       - {label: "Homepage Title", name: "title", widget: "string", default: "index"}
-      - {label: "Hero Image", name: "hero", widget: "image"}
+      - {label: "Hero Image", name: "heroImage", widget: "image"}
       - {label: "Hero Text", name: "heroText", widget: "code"}
       - {label: "Section 1", name: "section1", widget: "code", required: false}
       - {label: "Section 2", name: "section2", widget: "code", required: false}
@@ -33,7 +33,7 @@ collections:
     slug: "index"
     fields:
       - {label: "Title", name: "title", widget: "string", default: "Blog"}
-      - {label: "Hero Image", name: "hero", widget: "image", required: false}
+      - {label: "Hero Image", name: "heroImage", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Posts" # Used in the UI
@@ -58,6 +58,6 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Parent Page", name: "parent", widget: "string", required: false, hint: "By specifying a Parent Page this page will become a sub page. e.g. service/your-page"}
       - {label: "Slug", name: "slug", widget: "string", required: false, hint: "Title will be used if Slug is left empty"}
-      - {label: "Hero Image", name: "hero", widget: "image", required: false}
+      - {label: "Hero Image", name: "heroImage", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
     

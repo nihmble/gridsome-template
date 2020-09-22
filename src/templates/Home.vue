@@ -1,6 +1,7 @@
 <page-query>
   query Home($id: ID!) {
     data: home(id: $id) {
+      heroImage
       heroText { code }
     }
   }
@@ -8,7 +9,8 @@
 
 <template>
   <Layout>
-    {{ $page.data.heroText.code }}
+    <img :src="$page.data.heroImage" alt="">
+    <p v-html="$page.data.heroText.code" />
   </Layout>
 </template>
 
